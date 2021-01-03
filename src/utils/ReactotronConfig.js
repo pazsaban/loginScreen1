@@ -8,4 +8,6 @@ const reactotronConfig = {
   createEnhancer: () => Reactotron.createEnhancer(),
 };
 
+console.tron = Reactotron;
+
 export default reactotronConfig;

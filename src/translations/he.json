@@ -1,0 +1,16 @@
+
+{
+ 
+  "login": {
+    "title": "התחברות למערכת",
+    "login_button": "התחברות",
+    "email_address":"כתובת דואל",
+    "password":"סיסמה",
+    "remember_me":"זכור אותי",
+    "forgot_pass":"שכחת סיסמה?",
+    "run_by":"מופעל על ידי WeTask"
+
+
+  }
+
+}

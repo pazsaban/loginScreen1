@@ -1,0 +1,14 @@
+{
+ 
+  "login": {
+    "title": "System Connection",
+    "login_button": "Sign In",
+    "email_address":"Email Address ",
+    "password":"Password",
+    "remember_me":"Remember Me ",
+    "forgot_pass":"Forgot Password?",
+    "run_by":"Run By WeTask"
+
+  }
+
+}

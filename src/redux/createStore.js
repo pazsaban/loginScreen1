@@ -17,19 +17,30 @@
 //   return store;
 // };
 
-import {createStore} from 'easy-peasy';
-import model from './model';
+import {createStore} from 'redux';
+// import model from './model';
 
 let storeEnhancers = [];
 
-if (__DEV__) {
-  const reactotron = require('../utils/ReactotronConfig').default;
-  reactotron.initiate();
-  storeEnhancers = [...storeEnhancers, reactotron.createEnhancer()];
-}
+export default (rootReducer) => {
+  // const config = {
+  //   useFixtures: false,
+  //   ezLogin: false,
+  //   yellowBox: __DEV__,
+  //   reduxLogging: __DEV__,
+  //   includeExamples: __DEV__,
+  //   useReactotron: false,
+  // };
 
-const store = createStore(model, {
-  enhancers: [...storeEnhancers],
-});
+  if (__DEV__) {
+    const reactotron = require('../utils/ReactotronConfig').default;
+    reactotron.initiate();
+    storeEnhancers = [...storeEnhancers, reactotron.createEnhancer()];
+  }
 
-export default store;
+  const store = createStore(rootReducer, {
+    enhancers: [...storeEnhancers],
+  });
+
+  return store;
+};
